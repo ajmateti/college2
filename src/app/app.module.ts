@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { ImagesComponent } from './home/images/images.component';
 import { FacultyComponent } from './faculty/faculty.component';
 import { Routes, RouterModule } from '@angular/router';
+import { PrincipalComponent } from './principal/principal.component';
+import { DepartmentComponent } from './department/department.component';
 
 const appRoutes: Routes =
   [
@@ -15,6 +17,9 @@ const appRoutes: Routes =
     },
     {
       path: 'faculty', component: FacultyComponent
+    },
+    {
+      path: 'dept/:id', component: DepartmentComponent
     }
   ];
 
@@ -24,7 +29,9 @@ const appRoutes: Routes =
     NavbarComponent,
     HomeComponent,
     ImagesComponent,
-    FacultyComponent
+    FacultyComponent,
+    PrincipalComponent,
+    DepartmentComponent
   ],
   imports: [
     BrowserModule,

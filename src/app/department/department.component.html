@@ -1,0 +1,32 @@
+<p class="display-4 text-center">{{id}}</p>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-2">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <button class="btn btn-light nav-link mb-3" (click)="selected='faculty'">Faculty</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-light nav-link mb-3" (click)="selected='courses'">Courses</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-light nav-link mb-3" (click)="selected='infrastructure'">Infrastructure</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-light nav-link mb-3" (click)="selected='publications'">Publications</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-light nav-link mb-3" (click)="selected='syllabus'">Syllabus</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-light nav-link mb-3" (click)="selected='photogallery'">Photogallery</button>
+        </li>
+      </ul>
+
+    </div>
+    <div class="col-sm-10 ">
+      {{selected}}
+    </div>
+  </div>
+</div>
