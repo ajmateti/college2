@@ -26,7 +26,9 @@
 
     </div>
     <div class="col-sm-10 ">
-      {{selected}}
+      <div *ngIf="selected=='courses'">
+        <app-courses></app-courses>
+      </div>
     </div>
   </div>
 </div>

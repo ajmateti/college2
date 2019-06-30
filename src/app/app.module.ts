@@ -9,7 +9,8 @@ import { FacultyComponent } from './faculty/faculty.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PrincipalComponent } from './principal/principal.component';
 import { DepartmentComponent } from './department/department.component';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CoursesComponent } from './courses/courses.component';
 const appRoutes: Routes =
   [
     {
@@ -31,11 +32,13 @@ const appRoutes: Routes =
     ImagesComponent,
     FacultyComponent,
     PrincipalComponent,
-    DepartmentComponent
+    DepartmentComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

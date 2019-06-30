@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-department',
@@ -14,6 +14,10 @@ export class DepartmentComponent implements OnInit {
   ngOnInit() {
     // tslint:disable-next-line:no-string-literal
     this.id = this.route.snapshot.params['id'];
+    this.route.params.subscribe((params: Params) => {
+      // tslint:disable-next-line:no-string-literal
+      this.id = params['id'];
+    });
   }
 
 }
